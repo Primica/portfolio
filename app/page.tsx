@@ -9,7 +9,6 @@ const profile = {
   since: "Sept. 2025",
   status: "open to interesting collaborations",
   email: "arthur@malfere.dev",
-  github: "github.com/malfere",
   linkedin: "linkedin.com/in/arthur-malfere",
   pgp: "F1A9 4B72 90CE 8E21  1101 7F03",
 };
@@ -130,7 +129,7 @@ const experience = [
     since: "2022 · 2024",
     where: "IUT Lyon 2 + Piscine 42",
     city: "Lyon, FR",
-    role: "DUT Science des Données · C pupil at 42",
+    role: "DUT in Data Science · C pupil at 42",
     detail:
       "Two-year university diploma in data science (Python, R, SQL, statistics, supervised/unsupervised learning, basic ML pipelines). In parallel, the Piscine 42 — a month-long C/Unix bootcamp with peer-review only: no teachers, no grades, just relentless code review and the realisation that real programmers read code more than they write it.",
   },
@@ -227,7 +226,8 @@ export default function Page() {
       <section>
         <h2 id="about">[01] About</h2>
         <p>
-          Je suis <strong>{profile.name}</strong>, développeur backend à{" "}
+          I&apos;m <strong>{profile.name}</strong>, a backend developer working
+          at{" "}
           <a
             href="https://www.nicomatic.com/fr"
             className="link"
@@ -235,16 +235,15 @@ export default function Page() {
           >
             Nicomatic
           </a>
-          , une PME française qui conçoit des connecteurs et solutions
-          d&apos;interconnexion pour l&apos;aérospatial, la défense et le
-          médical. Quand je ne pousse pas des migrations SQL, j&apos;aime
-          écrire des outils en ligne de commande, lire des schémas Mermaid et
-          bricoler de petits services en weekend.
+          , a French SME that designs connectors and interconnection solutions
+          for aerospace, defense and medical. When I&apos;m not pushing SQL
+          migrations, I like writing CLI tools, reading Mermaid diagrams and
+          tinkering with small weekend services.
         </p>
 
         <p>
-          Je préfère les diagrammes qui passent dans un commit, les commits
-          courts, les architectures boring-but-correct, et le café filtre.
+          I prefer diagrams that fit in a commit, short commits, boring-but-correct
+          architectures, and filter coffee.
         </p>
 
         <Mermaid
@@ -263,29 +262,8 @@ export default function Page() {
 
       <section>
         <h2 id="now">[02] Now</h2>
-        <p>
-          <span className="tag">2026-09</span> writing a thin trace CLI on top
-          of the production MES, listening to <em>Idles</em>, and starting to
-          prototype a small Svelte+Htmx feedback panel for sales engineers.
-        </p>
-
-        <p>
-          <span className="tag">focus</span>
-        </p>
-        <ul>
-          {focus.map((line) => (
-            <li key={line}>{line}</li>
-          ))}
-        </ul>
-
-        <p>
-          <span className="tag">reading</span>
-        </p>
-        <ul>
-          {reading.map((line) => (
-            <li key={line}>{line}</li>
-          ))}
-        </ul>
+        <p>Working at :</p>
+        <img src="/nicomatic.svg" alt="Nicomatic" className="nicomatic-logo" />
       </section>
 
       <section>
@@ -409,8 +387,8 @@ export default function Page() {
       <section>
         <h2 id="talk">[06] Talk</h2>
         <p>
-          Le moyen le plus simple de me joindre reste l&apos;email. Je réponds
-          en général sous 48h, sauf si je suis dans un timing d&apos;usinage.
+          The easiest way to reach me is by email. I usually reply within 48h,
+          unless I&apos;m in the middle of a machining cycle.
         </p>
         <ul className="tree" style={{ marginTop: 0 }}>
           <li>
@@ -420,16 +398,6 @@ export default function Page() {
                 <span className="dim">email</span> ·{" "}
                 <a className="link" href={`mailto:${profile.email}`}>
                   {profile.email}
-                </a>
-              </li>
-              <li>
-                <span className="dim">git</span> ·{" "}
-                <a
-                  className="link"
-                  href={`https://${profile.github}`}
-                  rel="noreferrer"
-                >
-                  {profile.github}
                 </a>
               </li>
               <li>
