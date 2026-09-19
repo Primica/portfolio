@@ -54,7 +54,6 @@ const projects = [
       Recv --> Status{2xx?}
       Status -- yes --> Body[stream body to stdout / file]
       Status -- no  --> Err[exit per HTTP status]`,
-    link: "https://github.com/malfere/hfetch",
   },
   {
     id: "02",
@@ -81,7 +80,6 @@ const projects = [
       end
       Src->>Dst: COMMIT - rolling hash
       Dst-->>Src: ACK - retry block`,
-    link: "https://github.com/malfere/nrftp",
   },
   {
     id: "03",
@@ -102,7 +100,6 @@ const projects = [
       Exec --> MVCC[MVCC<br/>read snapshots<br/>WAL append]
       MVCC --> BTree[B+Tree storage<br/>16 KB pages]
       BTree --> Disk[(on-disk files)]`,
-    link: "https://github.com/malfere/srrdb",
   },
 ];
 
@@ -303,7 +300,7 @@ export default function Page() {
         <h2 id="play">[04] Play</h2>
         <p className="dim">
           Three open-source projects I keep returning to. All built on a small
-          Debian box under my desk, all on GitHub.
+          Debian box under my desk.
         </p>
 
         {projects.map((p) => (
@@ -325,15 +322,8 @@ export default function Page() {
             <p style={{ marginTop: 0 }}>{p.summary}</p>
             <Mermaid
               chart={p.art}
-              caption={p.link ? undefined : "not open-source · internal tool"}
+              caption="not open-source · internal tool"
             />
-            {p.link ? (
-              <p style={{ marginTop: 0, fontStyle: "italic" }}>
-                <a href={p.link} className="link" rel="noreferrer">
-                  {p.link}
-                </a>
-              </p>
-            ) : null}
           </article>
         ))}
       </section>
