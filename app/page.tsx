@@ -9,8 +9,6 @@ const profile = {
   since: "Sept. 2025",
   status: "open to interesting collaborations",
   email: "arthur@malfere.dev",
-  linkedin: "linkedin.com/in/arthur-malfere",
-  pgp: "F1A9 4B72 90CE 8E21  1101 7F03",
 };
 
 const stack = [
@@ -245,19 +243,6 @@ export default function Page() {
           I prefer diagrams that fit in a commit, short commits, boring-but-correct
           architectures, and filter coffee.
         </p>
-
-        <Mermaid
-          caption="A typical day of plumbing, last week."
-          chart={`flowchart LR
-    A[HTTP] --> B[parse / validate]
-    C[CLI]  --> B
-    B --> D[PG.WAL ingest]
-    D --> E[PG.HOT trx]
-    E --> F[PG.COLD weekly]
-    F --> G[aggregate / export]
-    F --> P[Prometheus]
-    F --> R[Grafana]`}
-        />
       </section>
 
       <section>
@@ -387,64 +372,10 @@ export default function Page() {
       <section>
         <h2 id="talk">[06] Talk</h2>
         <p>
-          The easiest way to reach me is by email. I usually reply within 48h,
-          unless I&apos;m in the middle of a machining cycle.
-        </p>
-        <ul className="tree" style={{ marginTop: 0 }}>
-          <li>
-            <span className="dim">contact/</span>
-            <ul>
-              <li>
-                <span className="dim">email</span> ·{" "}
-                <a className="link" href={`mailto:${profile.email}`}>
-                  {profile.email}
-                </a>
-              </li>
-              <li>
-                <span className="dim">in</span> ·{" "}
-                <a
-                  className="link"
-                  href={`https://${profile.linkedin}`}
-                  rel="noreferrer"
-                >
-                  {profile.linkedin}
-                </a>
-              </li>
-              <li>
-                <span className="dim">pgp</span> ·{" "}
-                <code>{profile.pgp}</code>
-              </li>
-            </ul>
-          </li>
-        </ul>
-
-        <form
-          className="grid"
-          style={{ marginTop: "calc(var(--line-height) * 2)" }}
-          aria-label="Quick contact"
-        >
-          <label>
-            name
-            <input type="text" placeholder="… your name" />
-          </label>
-          <label>
-            email
-            <input type="text" placeholder="… your email" />
-          </label>
-          <label>
-            subject
-            <input type="text" placeholder="… backend collab / freelance / …" />
-          </label>
-          <label>
-            message
-            <input type="text" placeholder="… a few lines about your project" />
-          </label>
-        </form>
-
-        <p className="dim" style={{ marginTop: "calc(var(--line-height) * 2)" }}>
-          Press <span className="kbd">Tab</span> to move between fields. Press{" "}
-          <span className="kbd">⌘</span>
-          <span className="kbd">↵</span> to send.
+          Mail ·{" "}
+          <a className="link" href={`mailto:${profile.email}`}>
+            {profile.email}
+          </a>
         </p>
       </section>
 
